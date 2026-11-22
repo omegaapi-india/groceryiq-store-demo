@@ -31,3 +31,22 @@ test('sponsor and contact details are present', () => {
   assert.match(index, /info@omegaapi\.com/);
   assert.match(index, /https:\/\/t\.me\/Omegaapiofficial/);
 });
+
+test('grocery theme art is local and present', () => {
+  const html = fs.readFileSync(new URL('index.html', root), 'utf8');
+  assert.match(html, /class="theme-grocery"/);
+  assert.match(html, /assets\/img\/hero\.svg/);
+  assert.match(html, /assets\/img\/flow\.svg/);
+  assert.ok(fs.existsSync(new URL('assets/theme.css', root)));
+  assert.ok(fs.existsSync(new URL('assets/img/hero.svg', root)));
+  assert.ok(fs.existsSync(new URL('assets/img/flow.svg', root)));
+});
+
+test('category layout is distinct', () => {
+  const html = fs.readFileSync(new URL('index.html', root), 'utf8');
+  const css = fs.readFileSync(new URL('assets/theme.css', root), 'utf8');
+  const app = fs.readFileSync(new URL('assets/app.js', root), 'utf8');
+  assert.ok(html.includes("STORE DEMO · SAMPLE AISLES · NO CHECKOUT"));
+  assert.ok(css.includes('LAYOUT: grocery'));
+  assert.match(app, /data-label/);
+});

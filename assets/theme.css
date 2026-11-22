@@ -1,0 +1,52 @@
+/* GroceryIQ — distinct theme layer. Local SVG art only. */
+body.theme-grocery {
+  --accent: #fb923c;
+  --accent-2: #a3e635;
+  --accent-ink: #2b1400;
+  --accent-soft: #fb923c26;
+  --theme-bg: #1a120c;
+}
+body.theme-grocery .eyebrow { color: var(--accent-2); }
+body.theme-grocery h1 span { background: linear-gradient(135deg, var(--accent), var(--accent-2)); background-clip: text; color: transparent; }
+body.theme-grocery .brand-mark,
+body.theme-grocery .header-cta,
+body.theme-grocery .button.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink); border-color: transparent; }
+body.theme-grocery .site-nav a:hover { color: var(--accent-2); }
+body.theme-grocery .mini-tag { background: var(--accent-soft); color: var(--accent-2); }
+body.theme-grocery .dot.green { background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+body.theme-grocery .hero { background: radial-gradient(circle at 85% 20%, var(--accent-soft), transparent 34%), var(--theme-bg); }
+body.theme-grocery .hero-card { background: linear-gradient(160deg, var(--theme-bg), #0b1120); }
+body.theme-grocery .mini-note { background: var(--accent-soft); color: var(--accent-2); }
+body.theme-grocery .section.soft { background: var(--accent-soft); }
+body.theme-grocery .data-table .status-cell { color: var(--accent-2); }
+body.theme-grocery .data-table .status-cell.review { color: #fbbf24; }
+body.theme-grocery .workflow-card span { color: var(--accent-2); }
+body.theme-grocery .log-item { border-left: 3px solid var(--accent); }
+body.theme-grocery .hero-art,
+body.theme-grocery .flow-banner img { display: block; width: 100%; height: auto; border-radius: 16px; }
+body.theme-grocery .hero-art { margin: 16px 0 8px; }
+body.theme-grocery .flow-banner { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 18px; align-items: center; margin-top: 20px; padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: rgba(8, 13, 24, .55); }
+body.theme-grocery .flow-banner p { margin: 0; color: #a9bbcd; font-size: .86rem; }
+body.theme-grocery .hero-card { border-radius: 24px; transform: rotate(-1.4deg); }
+body.theme-grocery .strip div { border-top: 3px solid var(--accent); }
+@media (max-width: 780px) {
+  body.theme-grocery .flow-banner { grid-template-columns: 1fr; }
+  body.theme-grocery .hero-card { transform: none; }
+}
+
+
+/* LAYOUT: grocery market tiles */
+body.theme-grocery .hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+body.theme-grocery .hero-copy { order: 2; }
+body.theme-grocery .hero-card { order: 1; }
+body.theme-grocery .strip { display: flex; overflow-x: auto; border-radius: 999px; }
+body.theme-grocery .strip div { min-width: 200px; border-radius: 999px; }
+body.theme-grocery .data-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+body.theme-grocery .data-table, body.theme-grocery .data-table tbody, body.theme-grocery .data-table tr, body.theme-grocery .data-table td { display: block; width: 100%; }
+body.theme-grocery .data-table tbody { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+body.theme-grocery .data-table tr { padding: 16px; border: 1px solid var(--line); border-radius: 20px; background: rgba(251, 146, 60, .08); }
+body.theme-grocery .data-table td { border: 0; padding: 3px 0; }
+body.theme-grocery .data-table td::before { content: attr(data-label) ': '; display: block; color: var(--muted); font-size: .66rem; font-weight: 800; text-transform: uppercase; }
+body.theme-grocery .data-table td:first-child { font-size: 1.05rem; font-weight: 900; color: var(--accent2); }
+body.theme-grocery .workflow-grid { display: flex; gap: 12px; }
+body.theme-grocery .workflow-card { flex: 1; border-bottom: 4px solid var(--accent2); }
