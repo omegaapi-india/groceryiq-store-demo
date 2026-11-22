@@ -50,3 +50,8 @@ body.theme-grocery .data-table td::before { content: attr(data-label) ': '; disp
 body.theme-grocery .data-table td:first-child { font-size: 1.05rem; font-weight: 900; color: var(--accent2); }
 body.theme-grocery .workflow-grid { display: flex; gap: 12px; }
 body.theme-grocery .workflow-card { flex: 1; border-bottom: 4px solid var(--accent2); }
+
+/* BACKEND: full-stack status controls */
+.backend-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+.backend-controls .mini-note { margin: 0; }
+.backend-controls .mini-note.error { color: #fca5a5; border-color: rgba(248, 113, 113, .5); }
